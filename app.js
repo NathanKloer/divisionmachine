@@ -11,13 +11,19 @@ function submit() {
         document.getElementById("demo").innerHTML = "The First Number must be larger than the Second Number!";
         return;
     }
-    for (var i = 0; x > 0; i++ ) {
-        x = x - in2;
+    for (var i = 1; x > 0; i++ ) {
+        x = Math.floor(x - in2);
     }
-    var result = i + 1;
-    var remainder = Number(in2) + x;
-    console.log("the answer is " + result)
-    console.log("The Remainder is " + remainder)
+    var result = i;
+    // var remainder = Number(in2) + x;
+    // if (x = 0) {
+    //     remainder = 0;
+    // } else { remainder = Number(in2) + x }
+    console.log("the answer is " + Math.floor(result));
+    if ( x == 0 ) {
+        console.log("There is no Remainder");
+    } else
+    console.log("The Remainder is " + (Number(in2)+x));
 }
 
 // document.getElementById("demo").innerHTML = x;
