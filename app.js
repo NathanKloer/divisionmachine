@@ -7,7 +7,7 @@ function submit() {
     var in1 = document.getElementById("inputOne").value;
     var in2 = document.getElementById("inputTwo").value;
     var x = in1 - in2;
-    if (x < 0) {
+    if (x < -1) {
         document.getElementById("demo").innerHTML = "The First Number must be larger than the Second Number!";
         return;
     }
@@ -16,8 +16,8 @@ function submit() {
     }
     var result = i;
     if (x == 0) {
-        document.getElementById("machine").append("The Quotient is "+ (result + 1) + ". And there is no Remainder");
+        document.getElementById("demo").append("\n The Quotient is "+ (result + 1) +". And there is no Remainder.");
     } else {
-        document.getElementById("machine").append("The Quotient is " + result + ". And the Remainder is " + (Number(in2) + x));
+        document.getElementById("demo").append("The Quotient is " + result + ". And the Remainder is " + (Number(in2) + x));
     }
 }
